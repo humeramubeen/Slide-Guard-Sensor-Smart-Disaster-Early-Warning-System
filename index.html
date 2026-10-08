@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SLIDE GUARD SENSOR — Fast Himalayan Satellite Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050c16;--panel:#0c1726;--panel2:#101d30;--line:#20334c;--text:#f3f7fc;--muted:#8ca1bc;--blue:#62caff;--green:#34d88f;--yellow:#ffd04d;--orange:#ff963f;--red:#ff5263;--shadow:0 18px 50px #0008}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 70% 0,#163453 0,#07111e 38%,#050c16 75%);color:var(--text);font:14px Manrope,Arial,sans-serif;min-height:100vh}.app{display:flex;min-height:100vh}.sidebar{width:198px;background:#07101c;border-right:1px solid var(--line);padding:22px 14px;position:fixed;inset:0 auto 0 0;z-index:20}.brand{display:flex;gap:10px;align-items:center;padding:0 8px 24px}.brandIcon{width:38px;height:38px;border:1px solid #3c6288;border-radius:10px;display:grid;place-items:center;background:#0c2035;font-size:20px}.brand b{font-size:12px;line-height:1.1}.brand small{display:block;color:#647a96;font-size:7px;letter-spacing:.13em;margin-top:5px}.nav{display:grid;gap:5px}.nav button{border:1px solid transparent;background:transparent;color:#91a5bf;text-align:left;border-radius:9px;padding:10px 11px;cursor:pointer;font:600 12px Manrope;transition:.2s}.nav button:hover,.nav button.active{background:#112237;border-color:#29415e;color:#fff}.nav button.active:before{content:"";display:inline-block;width:3px;height:17px;border-radius:3px;background:var(--blue);vertical-align:middle;margin-right:9px}.sidefoot{position:absolute;bottom:20px;left:20px;color:#66809e;font-size:9px}.sidefoot span{color:var(--green)}main{margin-left:198px;width:calc(100% - 198px);min-width:0}.top{height:64px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 20px;position:sticky;top:0;background:#07101ceb;backdrop-filter:blur(14px);z-index:10}.title{font-weight:800}.sub{font:10px 'JetBrains Mono';color:#526a88;margin-top:4px}.topRight{display:flex;align-items:center;gap:12px}.status{padding:8px 12px;border:1px solid #255a48;border-radius:20px;color:var(--green);background:#103326;font-size:11px;font-weight:800}.sim{border:1px solid #9a5930;background:#1a1820;color:#fff;border-radius:22px;padding:10px 16px;font-weight:800;font-size:11px;cursor:pointer}.sim:hover{filter:brightness(1.15)}.sim.running{border-color:var(--red);color:#ffd9dd}.sim.reset{border-color:var(--blue);color:var(--blue)}.page{display:none;padding:22px;max-width:1500px;margin:auto}.page.active{display:block}.hero{height:184px;border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative;background:#091524;box-shadow:var(--shadow);margin-bottom:24px}.hero svg{position:absolute;inset:0;width:100%;height:100%;opacity:.95}.heroText{position:relative;z-index:1;padding:30px 28px;max-width:620px}.eyebrow{color:var(--blue);font:700 9px 'JetBrains Mono';letter-spacing:.08em}.hero h1{font-size:25px;margin:8px 0 7px}.hero p{color:#aebfd2;line-height:1.5;max-width:570px;font-size:12px}.quote{font-style:italic;color:#7890ac;font-size:10px}.sectionHead{display:flex;justify-content:space-between;align-items:end;margin:18px 0 10px}.sectionHead h2{font-size:14px;margin:0}.sectionHead p{margin:0;color:#66809e;font-size:10px}.grid3{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:12px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:linear-gradient(145deg,#111e2f,#0a1523);border:1px solid var(--line);border-radius:15px;padding:16px;box-shadow:0 10px 30px #0003}.kpi{min-height:130px}.riskWrap{display:flex;align-items:center;gap:18px}.gauge{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--green) var(--risk),#223247 0);position:relative}.gauge:after{content:"";position:absolute;width:72px;height:72px;border-radius:50%;background:#0c1726}.gauge strong,.gauge span{position:relative;z-index:1}.gauge strong{font:22px 'JetBrains Mono'}.gauge span{position:absolute;margin-top:38px;color:#607894;font-size:7px}.big{font-size:20px;font-weight:800}.mono{font-family:'JetBrains Mono'}.muted{color:var(--muted);font-size:10px}.bar{height:4px;background:#1d2b40;border-radius:10px;overflow:hidden;margin-top:12px}.bar i{display:block;height:100%;width:var(--w,20%);background:var(--c,var(--blue));border-radius:10px}.sensorCard{min-height:112px}.sensorTop{display:flex;justify-content:space-between;gap:8px}.tag{font:8px 'JetBrains Mono';padding:4px 7px;border-radius:12px;background:#142337;color:#89a1bd}.tag.green{color:var(--green)}.tag.yellow{color:var(--yellow)}.tag.orange{color:var(--orange)}.tag.red{color:var(--red)}.value{font:700 20px 'JetBrains Mono';margin:12px 0 3px}.icon{color:var(--blue);font-size:17px}.table{width:100%;border-collapse:collapse}.table th,.table td{padding:11px;border-bottom:1px solid var(--line);text-align:left;font-size:11px}.table th{color:#6e86a3;font-size:9px;text-transform:uppercase}.pill{font-size:9px;padding:4px 8px;border-radius:12px}.normal{color:var(--green);background:#0c3024}.watch{color:var(--yellow);background:#352b0e}.high{color:var(--orange);background:#3b2111}.critical{color:var(--red);background:#3c131b}.map{height:300px;border-radius:15px;border:1px solid var(--line);overflow:hidden;position:relative;background:linear-gradient(145deg,#12334a,#173e32 45%,#0b1c29)}.map:before,.map:after{content:"";position:absolute;border-style:solid;border-width:0 100px 180px 100px;border-color:transparent transparent #1e4a4e transparent;bottom:-10px;left:12%}.map:after{left:50%;bottom:-25px;border-width:0 150px 230px 150px;border-color:transparent transparent #12333f transparent}.node{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 6px #62caff22}.impact{position:absolute;width:230px;height:150px;background:#ff52634d;border:2px solid #ff5263;border-radius:50%;left:42%;top:34%;transform:rotate(-15deg)}.river{position:absolute;width:80%;height:5px;background:#62caffaa;transform:rotate(20deg);left:10%;top:65%}.alert{border-left:3px solid var(--red);padding:14px 16px;background:#24111a;border-radius:8px}.flow{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.flow .box{padding:12px;border:1px solid var(--line);border-radius:10px;background:#0d1b2c;flex:1;min-width:100px;text-align:center;font-size:10px}.arrow{color:var(--blue);font-size:18px}.chart{height:180px;position:relative;overflow:hidden;border-top:1px solid var(--line);margin-top:10px}.chart svg{width:100%;height:100%}.switch{width:42px;height:23px;border-radius:20px;background:#26364b;cursor:pointer;padding:3px}.switch i{display:block;width:17px;height:17px;border-radius:50%;background:#8091a7;transition:.2s}.switch.on{background:#176044}.switch.on i{transform:translateX(19px);background:var(--green)}.settingsRow{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}.btn2{border:1px solid var(--line);background:#112237;color:#dce8f5;padding:9px 12px;border-radius:8px;cursor:pointer}.toast{position:fixed;right:20px;bottom:20px;background:#102137;border:1px solid #33506e;padding:13px 16px;border-radius:10px;box-shadow:var(--shadow);z-index:50;display:none}.toast.show{display:block}.modal{position:fixed;inset:0;background:#000b;display:none;place-items:center;z-index:60}.modal.show{display:grid}.modalBox{max-width:500px;width:90%;background:#101b2b;border:1px solid #71303c;border-radius:16px;padding:24px;box-shadow:0 30px 80px #000}.close{float:right;background:none;border:0;color:#9fb2c9;font-size:20px;cursor:pointer}@media(max-width:900px){.sidebar{transform:translateX(-100%)}main{margin-left:0;width:100%}.grid3,.grid4,.grid2{grid-template-columns:1fr}.page{padding:14px}.hero{height:auto;min-height:220px}.top{padding:0 12px}.topRight .status{display:none}}
+</style>
+
+<style>
+.fast-map{
+  height:520px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  overflow:hidden;
+  position:relative;
+  background:#101b25;
+  cursor:grab;
+  user-select:none;
+  touch-action:none;
+}
+.fast-map.dragging{cursor:grabbing}
+.map-image{
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  background-image:url("https://assets.science.nasa.gov/content/dam/science/esd/eo/content-feature/8000meterpeaks/images/himalaya_map_color.jpg");
+  background-size:cover;
+  background-position:center;
+  transform-origin:center center;
+  will-change:transform;
+  transition:transform .16s ease-out;
+}
+.fast-map.dragging .map-image{transition:none}
+.fast-map:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,#06101c18 0%,transparent 50%,#06101c35 100%);
+  pointer-events:none;
+}
+.map-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.map-btn{
+  border:1px solid var(--line);
+  background:#112237;
+  color:#dce8f5;
+  padding:8px 11px;
+  border-radius:8px;
+  cursor:pointer;
+  font:700 11px Manrope
+}
+.map-btn:hover,.map-btn.active{border-color:var(--blue);color:#fff;background:#17304b}
+.map-note{font-size:10px;color:var(--muted);margin-top:8px;line-height:1.5}
+.map-controls{
+  position:absolute;
+  right:15px;
+  top:15px;
+  z-index:8;
+  display:grid;
+  gap:5px
+}
+.map-controls button{
+  width:38px;height:38px;
+  border:1px solid #8aa0b8;
+  border-radius:8px;
+  background:#07101cdd;
+  color:white;
+  font-size:24px;
+  cursor:pointer
+}
+.map-controls button:hover{background:#17304b}
+.map-label{
+  position:absolute;
+  left:15px;
+  top:15px;
+  z-index:8;
+  padding:8px 11px;
+  border-radius:8px;
+  background:#07101ce8;
+  border:1px solid #607892;
+  color:white;
+  font:800 10px Manrope;
+  letter-spacing:.08em
+}
+.map-scale{
+  position:absolute;
+  left:15px;
+  bottom:15px;
+  z-index:8;
+  padding:7px 10px;
+  border-radius:7px;
+  background:#07101ce8;
+  border:1px solid #607892;
+  color:white;
+  font-size:9px
+}
+.map-marker{
+  position:absolute;
+  z-index:9;
+  width:34px;height:34px;
+  border:2px solid #fff;
+  border-radius:50%;
+  background:#0878a8;
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 0 0 5px #62caff40,0 6px 18px #0008;
+  transform:translate(-50%,-50%);
+  font-size:15px
+}
+.map-marker:hover{transform:translate(-50%,-50%) scale(1.14)}
+.m1{left:27%;top:38%}.m2{left:47%;top:33%}.m3{left:53%;top:54%}.m4{left:64%;top:61%}.m5{left:70%;top:25%}
+.source-pin{
+  position:absolute;
+  left:51%;top:45%;
+  z-index:9;
+  padding:6px 8px;
+  border-radius:7px;
+  background:#8b1827e8;
+  border:1px solid #ff8c98;
+  color:white;
+  font:800 10px Manrope;
+  transform:translate(-50%,-50%);
+  box-shadow:0 6px 18px #0008
+}
+.impact-zone{
+  position:absolute;
+  z-index:6;
+  width:31%;
+  height:28%;
+  left:50%;top:52%;
+  transform:translate(-50%,-50%) rotate(-18deg);
+  border:3px solid #ff5263;
+  background:#ff526338;
+  border-radius:50%;
+  box-shadow:0 0 30px #ff526344;
+  transition:opacity .2s,transform .2s
+}
+.impact-zone.hidden{opacity:0;pointer-events:none}
+.runout-line{
+  position:absolute;
+  z-index:7;
+  left:52%;top:49%;
+  width:27%;
+  height:5px;
+  background:#ff963f;
+  box-shadow:0 0 10px #ff963f;
+  transform:rotate(27deg);
+  transform-origin:left center;
+  border-radius:5px
+}
+.terrain-overlay{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  opacity:.28;
+  background:
+    repeating-linear-gradient(155deg,transparent 0 24px,#62caff55 25px 26px,transparent 27px 48px);
+  mix-blend-mode:screen;
+}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar"><div class="brand"><div class="brandIcon">🏔️</div><div><b>SLIDE GUARD<br>SENSOR</b><small>HIMALAYAN EARLY WARNING</small></div></div><nav class="nav" id="nav"></nav><div class="sidefoot"><span>●</span> 5/5 nodes online · solar 78%</div></aside>
+<main><header class="top"><div><div class="title" id="pageTitle">Dashboard</div><div class="sub" id="pageSub">Sector: Kedar Valley · Node cluster KV-01–05</div></div><div class="topRight"><span class="mono muted" id="clock">00:00:00</span><span class="status" id="topStatus">● NORMAL</span><button class="sim" id="simBtn">🚨 START DISASTER SIMULATION</button></div></header>
+<section class="page active" id="dashboard">
+<div class="hero"><div id="mountain"></div><div class="heroText"><div class="eyebrow">PROTOTYPE · SOLAR-POWERED · REAL-TIME MONITORING</div><h1>Kedar Valley Monitoring View</h1><p>Five ESP32-based mountain nodes track vibration, tilt, crack width, rainfall, soil moisture and water level around the clock — surfacing measurable abnormal precursor signals before they compound into a hazard.</p><div class="quote">“Measure Early. Understand Risk. Warn Before Impact.”</div></div></div>
+<div class="sectionHead"><h2>Current Risk Status</h2><p id="lastUpdate">Live simulation</p></div><div class="grid3"><div class="card kpi"><div class="riskWrap"><div class="gauge" id="gauge" style="--risk:0%"><strong id="riskScore">0</strong><span>RISK / 100</span></div><div><div class="big" id="riskLabel">NORMAL 🟢</div><div class="muted" id="riskMsg">All monitored signals are within expected demo baseline ranges.</div></div></div></div><div class="card kpi" id="dashV"></div><div class="card kpi" id="dashT"></div></div>
+<div class="sectionHead"><h2>Live Sensor Snapshot</h2><p>Auto-updating every 2 seconds</p></div><div class="grid4" id="snapshot"></div>
+<div class="sectionHead"><h2>Sector Overview</h2></div><div class="grid2"><div class="card"><div class="muted">☀ SOLAR</div><div class="value" id="solarKpi">78%</div><div class="muted">Battery reserve</div><div class="bar"><i id="solarBar" style="--w:78%;--c:var(--green)"></i></div></div><div class="card"><div class="muted">◉ NODES</div><div class="value">5/5 <small class="muted">online</small></div><div class="muted">Sensor network health</div><div class="bar"><i style="--w:100%;--c:var(--green)"></i></div></div></div>
+</section>
+<section class="page" id="sensors"><div class="sectionHead"><h2>Live Sensors</h2><button class="btn2" id="pause">⏸ Pause Feed</button></div><div class="grid3" id="sensorGrid"></div></section>
+<section class="page" id="risk"><div class="sectionHead"><h2>Risk Analysis</h2><p>Composite multi-sensor risk scoring</p></div><div class="grid2"><div class="card"><div class="big">Composite Risk Score</div><div class="value" id="riskBig">0 / 100</div><div class="bar"><i id="riskBar" style="--w:0%;--c:var(--green)"></i></div><p class="muted">Prototype demo thresholds — field validation required.</p></div><div class="card"><div class="big">Detected Signals</div><div id="contributors" style="margin-top:14px"></div></div></div><div class="card" style="margin-top:12px"><table class="table"><thead><tr><th>Sensor</th><th>Reading</th><th>Status</th><th>Contribution</th></tr></thead><tbody id="riskTable"></tbody></table></div></section>
+<section class="page" id="impact">
+<div class="sectionHead">
+  <h2>Impact Zone & Satellite View</h2>
+  <p>Fast satellite visualization · smooth zoom · drag to explore</p>
+</div>
+
+<div class="map-toolbar">
+  <button class="map-btn active" id="satBtn">🛰️ Satellite</button>
+  <button class="map-btn" id="terrainBtn">⛰️ Terrain Overlay</button>
+  <button class="map-btn" id="fitBtn">⌖ Reset View</button>
+  <button class="map-btn" id="impactBtn">⚠ Show Impact Zone</button>
+</div>
+
+<div class="fast-map" id="fastMap">
+  <div class="map-image" id="mapImage"></div>
+
+  <!-- Demo sensor locations -->
+  <button class="map-marker m1" data-node="KV-01" title="KV-01">📡</button>
+  <button class="map-marker m2" data-node="KV-02" title="KV-02">📡</button>
+  <button class="map-marker m3" data-node="KV-03" title="KV-03">📡</button>
+  <button class="map-marker m4" data-node="KV-04" title="KV-04">📡</button>
+  <button class="map-marker m5" data-node="KV-05" title="KV-05">📡</button>
+
+  <div class="source-pin">⚠ SOURCE</div>
+  <div class="impact-zone" id="impactZone"></div>
+  <div class="runout-line" id="runoutLine"></div>
+
+  <div class="map-label">HIMALAYAN MONITORING SECTOR</div>
+  <div class="map-controls">
+    <button id="zoomIn">+</button>
+    <button id="zoomOut">−</button>
+  </div>
+  <div class="map-scale">Prototype deployment visualization • NASA satellite imagery</div>
+</div>
+
+<div class="map-note">
+  <b>Fast map mode:</b> this version uses one satellite image instead of hundreds of live map tiles.
+  That removes the tile-by-tile loading/white-box problem and makes zooming much smoother for a hackathon demo.
+  Drag the map, use <b>+</b>/<b>−</b>, or use the mouse wheel.
+</div>
+
+<div class="grid2" style="margin-top:12px">
+  <div class="card">
+    <div class="eyebrow">DYNAMIC IMPACT ESTIMATION</div>
+    <h2 id="impactRange">Potential Impact Zone: 12–18 km Downstream</h2>
+    <p class="muted">Prototype estimate using event severity + terrain/slope/elevation + valley direction + runout assumptions.</p>
+    <div class="flow">
+      <div class="box">Event Size</div>
+      <div class="box">Terrain</div>
+      <div class="box">Slope</div>
+      <div class="box">Elevation</div>
+      <div class="box">Valley Direction</div>
+      <div class="box">Runout</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="big">Map Status</div>
+    <div style="margin-top:12px">
+      <div class="muted">DEPLOYMENT VIEW</div>
+      <div class="value">HIMALAYAN SECTOR</div>
+      <div class="muted">5 prototype sensor nodes · interactive visualization</div>
+    </div>
+    <div class="alert" style="margin-top:14px">
+      <b>Prototype map visualization</b><br>
+      <span class="muted">Satellite imagery is a regional reference. Sensor positions and impact corridor are demonstration data until field deployment.</span>
+    </div>
+  </div>
+</div>
+</section>
+<section class="page" id="alerts"><div class="sectionHead"><h2>Alerts</h2><p>Simulated mobile push, siren and dashboard notification</p></div><div id="alertCurrent"></div><div class="card" style="margin-top:12px"><h3>Dashboard Notification Log</h3><table class="table"><thead><tr><th>Time</th><th>Level</th><th>Event</th><th>Details</th></tr></thead><tbody id="alertLog"></tbody></table></div></section>
+<section class="page" id="network"><div class="sectionHead"><h2>Sensor Network</h2><p>Mountain node status, battery and location</p></div><div class="card"><table class="table"><thead><tr><th>Node</th><th>Location</th><th>Status</th><th>Battery</th></tr></thead><tbody id="nodes"></tbody></table></div></section>
+<section class="page" id="solar"><div class="sectionHead"><h2>Solar Power</h2><p>Generation, storage and Energy-Aware Mode</p></div><div class="grid3"><div class="card"><div class="muted">☀ SOLAR GENERATION</div><div class="value" id="solarGen">18 W</div></div><div class="card"><div class="muted">🔋 BATTERY</div><div class="value" id="battery">78%</div></div><div class="card"><div class="muted">⚡ POWER MODE</div><div class="value" id="powerMode">NORMAL</div></div></div><div class="card" style="margin-top:12px"><div class="flow"><div class="box">☀ Solar Panel</div><span class="arrow">→</span><div class="box">🔋 Battery</div><span class="arrow">→</span><div class="box">⚡ Power Management</div><span class="arrow">→</span><div class="box">🧠 ESP32</div><span class="arrow">→</span><div class="box">📡 Sensors</div></div><p class="muted" style="margin-top:18px">Low sunlight / snow → energy-aware mode. Abnormal movement → higher-frequency sensing and immediate transmission.</p></div></section>
+<section class="page" id="history"><div class="sectionHead"><h2>History</h2><p>Rolling trends across monitored signals</p></div><div class="grid2" id="charts"></div></section>
+<section class="page" id="settings"><div class="sectionHead"><h2>Settings</h2><p>Notifications, thresholds and demo controls</p></div><div class="card"><div class="settingsRow"><div><b>Notifications</b><div class="muted">Enable simulated mobile alerts</div></div><div class="switch on" id="notif"><i></i></div></div><div class="settingsRow"><div><b>Demo Mode</b><div class="muted">Gentle random sensor drift between simulations</div></div><div class="switch on" id="demo"><i></i></div></div><div class="settingsRow"><div><b>Reset Simulation</b><div class="muted">Return sensors to normal baseline</div></div><button class="btn2" id="reset">Reset</button></div><div class="settingsRow"><div><b>Prototype Thresholds</b><div class="muted">Composite: Normal 0–25 · Watch 26–50 · High Risk 51–75 · Critical 76–100</div></div></div></div></section>
+</main></div><div class="toast" id="toast"></div><div class="modal" id="modal"><div class="modalBox"><button class="close" id="close">×</button><div style="color:var(--red);font-size:26px">🚨</div><h2>CRITICAL ALERT</h2><p id="modalText">Abnormal mountain activity detected.</p><button class="btn2" id="modalOk">Acknowledge</button></div></div>
+<script>
+const pages=[['dashboard','Dashboard','Sector: Kedar Valley · Node cluster KV-01–05'],['sensors','Live Sensors','Vibration · Tilt · Crack · Rainfall · Soil · Water · Temp'],['risk','Risk Analysis','Composite multi-signal risk scoring'],['impact','Impact Zone','Terrain, movement direction & runout estimate'],['alerts','Alerts','Emergency warning · siren · mobile push'],['network','Sensor Network','Mountain node status & battery'],['solar','Solar Power','Generation, storage & energy-aware mode'],['history','History','Rolling trends across all sensors'],['settings','Settings','Notifications, thresholds & demo mode']];
+const nav=document.getElementById('nav');pages.forEach((p,i)=>{let b=document.createElement('button');b.textContent=p[1];b.dataset.page=p[0];if(i===0)b.classList.add('active');b.onclick=()=>go(p[0]);nav.appendChild(b)});function go(id){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===id));let p=pages.find(x=>x[0]===id);pageTitle.textContent=p[1];pageSub.textContent=p[2]}
+function mountain(){return `<svg viewBox="0 0 900 260" preserveAspectRatio="none"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#234e73"/><stop offset="1" stop-color="#07101c"/></linearGradient></defs><rect width="900" height="260" fill="url(#sky)"/><polygon points="0,170 150,75 270,155 430,40 570,150 720,70 900,155 900,260 0,260" fill="#18334f"/><polygon points="0,205 130,115 270,185 420,90 580,185 735,105 900,185 900,260 0,260" fill="#0e2238"/><polygon points="430,40 390,95 470,95" fill="#e8f6ff" opacity=".8"/><polygon points="720,70 680,120 760,120" fill="#e8f6ff" opacity=".65"/><circle cx="770" cy="50" r="24" fill="#fff" opacity=".12"/></svg>`}document.getElementById('mountain').innerHTML=mountain();
+const S=[{id:'vibration',n:'Vibration / Geophone',u:'mm/s',base:.8,noise:.3,watch:3,high:5,crit:7,weight:.22,icon:'〽️'},{id:'tilt',n:'Slope Tilt',u:'°',base:.3,noise:.12,watch:2,high:4,crit:6,weight:.2,icon:'∠'},{id:'crack',n:'Crack Width',u:'mm',base:.6,noise:.15,watch:2,high:4,crit:7,weight:.2,icon:'⚡'},{id:'rain',n:'Rainfall',u:'mm',base:8,noise:2,watch:30,high:50,crit:75,weight:.16,icon:'🌧️'},{id:'soil',n:'Soil Moisture',u:'%',base:35,noise:3,watch:50,high:70,crit:85,weight:.13,icon:'💧'},{id:'water',n:'Water Level',u:'%',base:30,noise:2,watch:50,high:70,crit:85,weight:.09,icon:'🌊'},{id:'temp',n:'Temperature',u:'°C',base:4,noise:1,watch:null,high:null,crit:null,weight:0,icon:'🌡️'}];
+let state={},hist={},paused=false,sim=false,simTimers=[],risk=0,logs=[],solar=78;S.forEach(s=>{state[s.id]=s.base;hist[s.id]=Array(30).fill(s.base)});function clamp(x,a,b){return Math.max(a,Math.min(b,x))}function status(v,s){if(!s.watch)return'normal';return v>=s.crit?'critical':v>=s.high?'high':v>=s.watch?'watch':'normal'}function scoreSensor(v,s){if(!s.weight)return 0;if(v<s.watch)return 0;let p=v>=s.crit?1:v>=s.high?.72:v>=s.watch?.38:0;return p*s.weight*100}function calc(){return Math.round(clamp(S.reduce((a,s)=>a+scoreSensor(state[s.id],s),0),0,100))}function label(r){return r>=76?'CRITICAL':r>=51?'HIGH RISK':r>=26?'WATCH':'NORMAL'}function cls(x){return x==='critical'?'critical':x==='high'?'high':x==='watch'?'watch':'normal'}
+function renderSensor(s,full=false){let st=status(state[s.id],s),v=state[s.id];return `<div class="card sensorCard"><div class="sensorTop"><span class="icon">${s.icon}</span><span class="tag ${cls(st)}">${st.toUpperCase()}</span></div><div class="value">${v.toFixed(s.u==='%'?0:2)} <small class="muted">${s.u}</small></div><div class="muted">${s.n}</div><div class="bar"><i style="--w:${Math.min(100,(v/(s.crit||20))*100)}%;--c:var(--${st==='critical'?'red':st==='high'?'orange':st==='watch'?'yellow':'blue'})"></i></div></div>`}
+function render(){risk=calc();let l=label(risk),c=l==='CRITICAL'?'red':l==='HIGH RISK'?'orange':l==='WATCH'?'yellow':'green';riskScore.textContent=risk;riskLabel.textContent=l+' '+(l==='CRITICAL'?'🔴':l==='HIGH RISK'?'🟠':l==='WATCH'?'🟡':'🟢');gauge.style.setProperty('--risk',risk+'%');gauge.style.background=`conic-gradient(var(--${c}) ${risk}%,#223247 0)`;topStatus.textContent='● '+l;topStatus.style.color=`var(--${c})`;riskBig.textContent=risk+' / 100';riskBar.style.setProperty('--w',risk+'%');riskBar.style.setProperty('--c',`var(--${c})`);riskMsg.textContent=l==='NORMAL'?'All monitored signals are within expected demo baseline ranges.':`${S.filter(s=>status(state[s.id],s)!=='normal').length} sensor signals are outside the normal demo band.`;snapshot.innerHTML=S.slice(0,4).map(s=>renderSensor(s)).join('');sensorGrid.innerHTML=S.map(s=>renderSensor(s)).join('');dashV.innerHTML=`<div class="sensorTop"><span class="icon">〽️</span><span class="tag ${cls(status(state.vibration,S[0]))}">${status(state.vibration,S[0]).toUpperCase()}</span></div><div class="value">${state.vibration.toFixed(2)} <small class="muted">mm/s</small></div><div class="muted">Vibration (Geophone)</div><div class="bar"><i style="--w:${state.vibration/10*100}%"></i></div>`;dashT.innerHTML=`<div class="sensorTop"><span class="icon">∠</span><span class="tag ${cls(status(state.tilt,S[1]))}">${status(state.tilt,S[1]).toUpperCase()}</span></div><div class="value">${state.tilt.toFixed(2)} <small class="muted">°</small></div><div class="muted">Slope Tilt</div><div class="bar"><i style="--w:${state.tilt/10*100}%"></i></div>`;riskTable.innerHTML=S.filter(s=>s.weight).map(s=>`<tr><td>${s.n}</td><td class="mono">${state[s.id].toFixed(s.u==='%'?0:2)} ${s.u}</td><td><span class="pill ${cls(status(state[s.id],s))}">${status(state[s.id],s).toUpperCase()}</span></td><td class="mono">+${scoreSensor(state[s.id],s).toFixed(0)}</td></tr>`).join('');contributors.innerHTML=S.filter(s=>scoreSensor(state[s.id],s)>0).map(s=>`<div style="padding:8px 0;border-bottom:1px solid var(--line)">${s.n} <span style="float:right" class="mono">+${scoreSensor(state[s.id],s).toFixed(0)}</span></div>`).join('')||'<span class="muted">No abnormal contributing signals.</span>';solarKpi.textContent=Math.round(solar)+'%';solarBar.style.setProperty('--w',solar+'%');battery.textContent=Math.round(solar)+'%';solarGen.textContent=Math.round(10+Math.random()*24)+' W';powerMode.textContent=solar<25?'ENERGY-AWARE':l==='CRITICAL'?'CRITICAL EVENT':'NORMAL';renderNodes();renderCharts();renderAlerts(l);lastUpdate.textContent='Last updated: '+new Date().toLocaleTimeString();}
+function step(){if(paused||sim)return;S.forEach(s=>{let v=state[s.id]+(s.base-state[s.id])*.08+(Math.random()-.5)*s.noise;state[s.id]=s.id==='temp'?clamp(v,-20,25):Math.max(0,v);hist[s.id].push(state[s.id]);if(hist[s.id].length>30)hist[s.id].shift()});solar=clamp(solar+(Math.random()-.5)*2,15,95);render()}
+function target(vals,dur){let start={};S.forEach(s=>start[s.id]=state[s.id]);let t0=Date.now();let id=setInterval(()=>{let f=clamp((Date.now()-t0)/dur,0,1);S.forEach(s=>{if(vals[s.id]!=null)state[s.id]=start[s.id]+(vals[s.id]-start[s.id])*f+(Math.random()-.5)*s.noise*.15;hist[s.id].push(state[s.id]);if(hist[s.id].length>30)hist[s.id].shift()});render();if(f>=1)clearInterval(id);},300);simTimers.push(id)}
+function simulate(){if(sim)return;sim=true;simBtn.classList.add('running');simBtn.textContent='SIMULATION RUNNING…';toastMsg('Disaster simulation started');target({vibration:2.2,tilt:1.5,crack:1.5,rain:35,soil:55,water:52},5000);simTimers.push(setTimeout(()=>target({vibration:5.5,tilt:4.5,crack:4.5,rain:60,soil:76,water:74},6000),5000));simTimers.push(setTimeout(()=>target({vibration:8.5,tilt:7,crack:7.5,rain:88,soil:92,water:90},6000),11000));simTimers.push(setTimeout(()=>{impactRange.textContent='Potential Impact Zone: '+(12+Math.floor(Math.random()*3))+'–'+(18+Math.floor(Math.random()*4))+' km Downstream';log('critical','Abnormal mountain activity detected','Multi-sensor critical pattern');alertCurrent.innerHTML='<div class="alert"><b>🚨 CRITICAL ALERT — EARLY WARNING GENERATED</b><br><span class="muted">Abnormal vibration, tilt, crack, rainfall and soil/water signals detected. Potential impact zone estimate updated.</span></div>';modal.classList.add('show');go('alerts')},17000));simTimers.push(setTimeout(()=>{sim=false;simBtn.classList.remove('running');simBtn.classList.add('reset');simBtn.textContent='RESET SIMULATION'},18500))}
+function reset(){simTimers.forEach(clearInterval);simTimers.forEach(clearTimeout);simTimers=[];sim=false;S.forEach(s=>state[s.id]=s.base);solar=78;simBtn.classList.remove('running','reset');simBtn.textContent='🚨 START DISASTER SIMULATION';alertCurrent.innerHTML='';toastMsg('Simulation reset');render();go('dashboard')}
+function log(level,event,details){logs.unshift({time:new Date().toLocaleTimeString(),level,event,details});logs=logs.slice(0,15)}function renderAlerts(l){alertLog.innerHTML=logs.map(x=>`<tr><td>${x.time}</td><td><span class="pill ${x.level}">${x.level.toUpperCase()}</span></td><td>${x.event}</td><td>${x.details}</td></tr>`).join('')||'<tr><td colspan="4" class="muted">No alerts yet.</td></tr>'}
+function renderNodes(){let arr=[['KV-01','Ridge North'],['KV-02','East Scarp'],['KV-03','Valley Base'],['KV-04','Riverbank'],['KV-05','Summit Cam']];nodes.innerHTML=arr.map((x,i)=>`<tr><td>Node ${String(i+1).padStart(2,'0')}</td><td>${x[1]}</td><td><span class="pill normal">ONLINE</span></td><td>${Math.round(clamp(solar-i*7+Math.random()*4,10,99))}%</td></tr>`).join('')}
+function chartSvg(s){let a=hist[s.id],min=Math.min(...a),max=Math.max(...a);if(max===min)max=min+1;let pts=a.map((v,i)=>`${i/(a.length-1)*100},${100-(v-min)/(max-min)*90-5}`).join(' ');return `<div class="card"><b>${s.n}</b><div class="muted">${state[s.id].toFixed(2)} ${s.u}</div><div class="chart"><svg viewBox="0 0 100 100" preserveAspectRatio="none"><polyline points="${pts}" fill="none" stroke="#62caff" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg></div></div>`}function renderCharts(){charts.innerHTML=S.slice(0,6).map(chartSvg).join('')}
+function toastMsg(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}
+simBtn.onclick=()=>simBtn.classList.contains('reset')?reset():simulate();pause.onclick=()=>{paused=!paused;pause.textContent=paused?'▶ Resume Feed':'⏸ Pause Feed'};reset.onclick=reset;close.onclick=()=>modal.classList.remove('show');modalOk.onclick=()=>modal.classList.remove('show');notif.onclick=()=>notif.classList.toggle('on');demo.onclick=()=>demo.classList.toggle('on');setInterval(()=>clock.textContent=new Date().toLocaleTimeString('en-GB'),1000);setInterval(step,2000);render();
+
+
+// ---------------- FAST SATELLITE MAP ----------------
+let fastMapReady = false;
+let mapZoom = 1;
+let mapX = 0, mapY = 0;
+let draggingMap = false, startX = 0, startY = 0;
+let terrainOn = false;
+
+const fastMap = document.getElementById('fastMap');
+const mapImage = document.getElementById('mapImage');
+const impactZone = document.getElementById('impactZone');
+
+function applyMapTransform(){
+  mapImage.style.transform = `translate(${mapX}px,${mapY}px) scale(${mapZoom})`;
+}
+
+function clampMapZoom(z){ return Math.max(1, Math.min(3.2,z)); }
+
+function resetFastMap(){
+  mapZoom=1; mapX=0; mapY=0;
+  applyMapTransform();
+}
+
+function initFastMap(){
+  if(fastMapReady) return;
+  fastMapReady=true;
+
+  document.getElementById('zoomIn').onclick=()=>{
+    mapZoom=clampMapZoom(mapZoom+.25);
+    applyMapTransform();
+  };
+  document.getElementById('zoomOut').onclick=()=>{
+    mapZoom=clampMapZoom(mapZoom-.25);
+    applyMapTransform();
+  };
+  document.getElementById('fitBtn').onclick=resetFastMap;
+
+  document.getElementById('impactBtn').onclick=()=>{
+    impactZone.classList.toggle('hidden');
+    document.getElementById('impactBtn').textContent =
+      impactZone.classList.contains('hidden') ? '⚠ Show Impact Zone' : '✓ Hide Impact Zone';
+  };
+
+  document.getElementById('satBtn').onclick=()=>{
+    terrainOn=false;
+    document.getElementById('satBtn').classList.add('active');
+    document.getElementById('terrainBtn').classList.remove('active');
+    let overlay=document.querySelector('.terrain-overlay');
+    if(overlay) overlay.remove();
+  };
+
+  document.getElementById('terrainBtn').onclick=()=>{
+    terrainOn=!terrainOn;
+    document.getElementById('terrainBtn').classList.toggle('active',terrainOn);
+    document.getElementById('satBtn').classList.toggle('active',!terrainOn);
+    let overlay=document.querySelector('.terrain-overlay');
+    if(terrainOn && !overlay){
+      overlay=document.createElement('div');
+      overlay.className='terrain-overlay';
+      fastMap.insertBefore(overlay, fastMap.firstChild);
+    }else if(!terrainOn && overlay) overlay.remove();
+  };
+
+  fastMap.addEventListener('wheel',(e)=>{
+    e.preventDefault();
+    const rect=fastMap.getBoundingClientRect();
+    const mx=e.clientX-rect.left-rect.width/2;
+    const my=e.clientY-rect.top-rect.height/2;
+    const old=mapZoom;
+    const next=clampMapZoom(old+(e.deltaY<0?.18:-.18));
+    const ratio=next/old;
+    mapX=mx-(mx-mapX)*ratio;
+    mapY=my-(my-mapY)*ratio;
+    mapZoom=next;
+    applyMapTransform();
+  },{passive:false});
+
+  fastMap.addEventListener('pointerdown',(e)=>{
+    if(e.target.closest('.map-controls,.map-marker,.source-pin,.map-label,.map-scale')) return;
+    draggingMap=true;
+    startX=e.clientX-mapX;
+    startY=e.clientY-mapY;
+    fastMap.classList.add('dragging');
+    fastMap.setPointerCapture(e.pointerId);
+  });
+
+  fastMap.addEventListener('pointermove',(e)=>{
+    if(!draggingMap) return;
+    mapX=e.clientX-startX;
+    mapY=e.clientY-startY;
+    applyMapTransform();
+  });
+
+  fastMap.addEventListener('pointerup',()=>{
+    draggingMap=false;
+    fastMap.classList.remove('dragging');
+  });
+
+  fastMap.addEventListener('pointercancel',()=>{
+    draggingMap=false;
+    fastMap.classList.remove('dragging');
+  });
+
+  document.querySelectorAll('.map-marker').forEach((m)=>{
+    m.addEventListener('click',(e)=>{
+      e.stopPropagation();
+      const id=m.dataset.node;
+      const index=parseInt(id.slice(-2),10)-1;
+      const ids=['vibration','tilt','crack','rain','soil'];
+      const sid=ids[index] || 'vibration';
+      const s=S.find(x=>x.id===sid);
+      const value=state[sid];
+      toastMsg(`${id}: ${s.n} ${value.toFixed(s.u==='%'?0:2)} ${s.u} · ${status(value,s).toUpperCase()}`);
+    });
+  });
+}
+
+const oldGoFast = go;
+go = function(id){
+  oldGoFast(id);
+  if(id==='impact') setTimeout(initFastMap,80);
+};
+
+setTimeout(initFastMap,500);
+
+</script></body></html>
